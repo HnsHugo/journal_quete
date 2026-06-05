@@ -1,0 +1,181 @@
+html,
+body,
+#app {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.app {
+  color: #ffffff;
+  min-height: 100vh;
+  position: relative;
+
+  background-image: url('/background.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+.header {
+  height: 230px;
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: 180px 1fr 220px;
+  align-items: center;
+
+  padding: 0 40px;
+
+  position: relative;
+  z-index: 10;
+}
+
+.header-left {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.logo {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+}
+
+.header-center {
+  height: 220px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-image: url('/header-bg.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.header-center h1 {
+  margin: 0;
+  max-width: 420px;
+
+  text-align: center;
+  font-size: 34px;
+  line-height: 1.1;
+
+  color: #f5d38a;
+  text-shadow: 3px 3px 5px black;
+
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+.header-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.add-quest-button {
+  padding: 14px 20px;
+
+  background: linear-gradient(#9b6b2f, #5b3414);
+  color: #fff3c4;
+
+  border: 2px solid #c99743;
+  border-radius: 8px;
+
+  font-weight: bold;
+  font-family: Georgia, 'Times New Roman', serif;
+
+  cursor: pointer;
+
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.7);
+}
+
+.add-quest-button:hover {
+  background: linear-gradient(#b8843b, #6b3d18);
+}
+
+
+
+
+
+
+.quest-table {
+  width: 85%;
+  margin: 40px auto;
+  border-collapse: separate;
+  border-spacing: 0;
+
+  background: rgba(72, 38, 16, 0.92);
+  color: #f8e6b0;
+
+  border: 4px solid #9b6b2f;
+  border-radius: 14px;
+  overflow: hidden;
+
+  box-shadow:
+    0 0 20px rgba(0, 0, 0, 0.8),
+    inset 0 0 25px rgba(255, 196, 87, 0.15);
+
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+.quest-table thead {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(126, 75, 28, 0.95),
+      rgba(63, 31, 12, 0.95)
+    );
+}
+
+.quest-table th {
+  padding: 16px 20px;
+
+  color: #ffd77a;
+  font-size: 20px;
+  text-align: left;
+  letter-spacing: 1px;
+
+  border-bottom: 3px solid #c99743;
+  text-shadow: 2px 2px 4px #000;
+}
+
+.quest-table td {
+  padding: 14px 20px;
+
+  font-size: 17px;
+  color: #f3dfaa;
+
+  background: rgba(45, 24, 10, 0.75);
+  border-bottom: 1px solid rgba(201, 151, 67, 0.35);
+}
+
+.quest-table tbody tr:nth-child(even) td {
+  background: rgba(69, 36, 14, 0.78);
+}
+
+.quest-table tbody tr:hover td {
+  background: rgba(116, 68, 24, 0.95);
+  color: #fff3c4;
+  cursor: pointer;
+}
+
+.quest-table th:not(:last-child),
+.quest-table td:not(:last-child) {
+  border-right: 1px solid rgba(201, 151, 67, 0.35);
+}
+
+.quest-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
